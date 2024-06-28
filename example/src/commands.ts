@@ -6,6 +6,7 @@ export enum Commands {
     STATUS_CARDS = '/cards-with-status-colors',
     FORM_CARD = '/card-with-a-form',
     CARD_WITH_MARKDOWN_LIST = '/card-with-markdown-list',
+    CARD_WITH_MARKDOWN_LIST_AND_NO_CANCEL = '/card-with-markdown-list-and-no-cancel',
     CARD_SNAPS_TO_TOP = '/card-snaps-to-top',
     FILE_LIST_CARD = '/card-with-a-file-list',
     PROGRESSIVE_CARD = '/card-with-progressing-content',

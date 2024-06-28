@@ -68,6 +68,8 @@ export const sampleMarkdownList: Partial<ChatItem>[] = [
     { body: `${sampleList4 as string}` },
 ];
 
+export const sampleMarkdownListWithNoCancel = sampleMarkdownList.map(i => ({ ...i, showCancelButton: false }));
+
 export const exampleStreamParts: Partial<ChatItem>[] = [
     { body: `${md0 as string}` },
     { body: `${md1 as string}` },
@@ -157,6 +159,10 @@ export const defaultFollowUps: ChatItem = {
                 pillText: 'Markdown list',
             },
             {
+                command: Commands.CARD_WITH_MARKDOWN_LIST_AND_NO_CANCEL,
+                pillText: 'Markdown list w no cancel',
+            },
+            {
                 command: Commands.CARD_SNAPS_TO_TOP,
                 pillText: 'Snaps to top',
             },
@@ -180,6 +186,11 @@ export const defaultFollowUps: ChatItem = {
                 pillText: 'Followups on right',
                 command: Commands.FOLLOWUPS_AT_RIGHT,
             },
+            {
+                pillText: 'Prompt sticky card',
+                command: Commands.SHOW_STICKY_CARD,
+            },
+
             {
                 pillText: 'Some auto reply',
                 prompt: 'Some random auto reply here.',
@@ -210,7 +221,7 @@ export const exampleFileListChatItem: ChatItem = {
         },
         details: {
             'src/index.ts': {
-                description: exampleCodeDiff
+                description: exampleCodeDiff,
             },
         },
     },
@@ -227,7 +238,7 @@ export const exampleFileListChatItemForUpdate: Partial<ChatItem> = {
                 status: 'error',
                 label: 'File rejected',
                 icon: MynahIcons.CANCEL_CIRCLE,
-                description: exampleCodeDiff
+                description: exampleCodeDiff,
             },
         },
         actions: {

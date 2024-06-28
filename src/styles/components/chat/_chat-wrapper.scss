@@ -19,7 +19,7 @@
     justify-content: space-around;
     align-items: stretch;
     display: none;
-    > div[class^="mynah-chat"] {
+    > div[class^='mynah-chat'] {
         width: 100%;
         max-width: 100%;
         box-sizing: border-box;
@@ -28,7 +28,7 @@
     }
     &:after {
         transition: all $smoothduration $smoothbezier;
-        content: "";
+        content: '';
         position: absolute;
         top: 0;
         right: 0;
@@ -44,16 +44,24 @@
         transform-origin: center center;
     }
 
-    @import "chat-items-container";
-    @import "chat-overflowing-intermediate-block";
-    @import "chat-prompt-wrapper";
+    @import 'chat-items-container';
+    @import 'chat-overflowing-intermediate-block';
+    @import 'chat-prompt-wrapper';
 }
 
 .mynah-chat-items-container,
 .mynah-chat-prompt-input-sticky-card {
-    @import "chat-item-card";
+    @import 'chat-item-card';
+    padding: 0px !important;
+    .mynah-chat-item-card-status-default {
+        .padding-large {
+            padding: 2px !important;
+        }
+        .mynah-chat-item-buttons-container {
+        }
+    }
 }
 
-@import "chat-command-selector";
-@import "chat-item-tree-view";
-@import "chat-prompt-attachment";
+@import 'chat-command-selector';
+@import 'chat-item-tree-view';
+@import 'chat-prompt-attachment';
